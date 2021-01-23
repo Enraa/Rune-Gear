@@ -185,6 +185,7 @@ class GearSection extends React.Component {
 		this.prayerUpdate = this.prayerUpdate.bind(this);
 		this.potionUpdate = this.potionUpdate.bind(this);
 		this.styleUpdate = this.styleUpdate.bind(this);
+		this.spellUpdate = this.spellUpdate.bind(this);
 		this.ClickMenuClear = this.ClickMenuClear.bind(this);
 		this.popupActiveMethod = this.popupActiveMethod.bind(this);
 		this.renderGearSelection = this.renderGearSelection.bind(this);
@@ -390,6 +391,20 @@ class GearSection extends React.Component {
 		});
 		// Pushes this up to App.js. 
 		this.props.styleUpdate(currstyle, currdamage);
+	}
+
+	// Called from GearBoxSpell. This will get the current Spell and then push up to App.js. 
+	spellUpdate() {
+		var self = this;
+		console.log(this.myRefs["spell"].current.state.currentspell);
+		var currentSpell = self.myRefs["spell"].current.state.currentspell;
+		var outputDamage = self.myRefs["spell"].current.state.outputDamage;
+		this.setState({
+			magicspell: currentSpell,
+			magicdamage: outputDamage
+		});
+		// Pushes this up to App.js. 
+		this.props.spellUpdate(currentSpell, outputDamage);
 	}
 
 	// Used for each stat, with it's icon and bonus. 
@@ -1204,7 +1219,7 @@ class GearSection extends React.Component {
 						>
 							<GearBoxSpell
 								ref={this.myRefs["spell"]}
-								prayerUpdate={this.prayerUpdate}
+								spellUpdate={this.spellUpdate}
 								prayercurrenttotalmod={this.state.prayercurrenttotalmod}
 								potioncurrenttotalmod={this.state.potioncurrenttotalmod}
 								currentlevels={this.props.currentlevels}

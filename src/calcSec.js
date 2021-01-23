@@ -1355,6 +1355,8 @@ class CalcSection extends React.Component {
 						prayercurrenttotalmod={this.props.prayercurrenttotalmod}
 						stylecurrentdamage={this.props.stylecurrentdamage}
 						stylecurrentstyle={this.props.stylecurrentstyle}
+						magicspell={this.props.magicspell}
+						magicdamage={this.props.magicdamage}
 					/>
 				</div>
 			</div>

@@ -153,6 +153,8 @@ class App extends React.Component {
 			},
 			stylecurrentstyle: "none",
 			stylecurrentdamage: "none",
+			magicspell: "wind-strike",
+			magicdamage: 1,
 			currentlevel: {
 				attack: 1,
 				strength: 1,
@@ -173,6 +175,7 @@ class App extends React.Component {
 		this.prayerUpdate = this.prayerUpdate.bind(this);
 		this.potionUpdate = this.potionUpdate.bind(this);
 		this.styleUpdate = this.styleUpdate.bind(this);
+		this.spellUpdate = this.spellUpdate.bind(this);
 		this.testEmptyReq = this.testEmptyReq.bind(this);
 		this.testGearPopup = this.testGearPopup.bind(this);
 		this.getSlot = this.getSlot.bind(this);
@@ -302,6 +305,13 @@ class App extends React.Component {
 		});
 	}
 
+	spellUpdate(newmagicspell, newmagicdamage) {
+		this.setState({
+			magicspell: newmagicspell,
+			magicdamage: newmagicdamage
+		});
+	}
+
 	testEmptyReq(slot) {
 		// This will test the prop's slot for the "Invalid" or "Empty" names which will be declared when empty.
 		var emptytest = true; //this.state.gear[slot].name;
@@ -394,6 +404,7 @@ class App extends React.Component {
 								prayerUpdate={this.prayerUpdate}
 								potionUpdate={this.potionUpdate}
 								styleUpdate={this.styleUpdate}
+								spellUpdate={this.spellUpdate}
 								currentlevels={this.state.currentlevel}
 								geartotals={this.state.geartotals}
 								onClick={() => this.handleClicks}
@@ -408,6 +419,8 @@ class App extends React.Component {
 								potioncurrenttotalmod={this.state.potioncurrenttotalmod}
 								stylecurrentdamage={this.state.stylecurrentdamage}
 								stylecurrentstyle={this.state.stylecurrentstyle}
+								magicdamage={this.state.magicdamage}
+								magicspell={this.state.magicspell}
 								updateStats={this.updateStats}
 							/>
 						</div>

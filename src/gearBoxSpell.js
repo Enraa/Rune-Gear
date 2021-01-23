@@ -68,7 +68,7 @@ class GearBoxSpell extends React.Component {
 				popupActive: true
 			});
 		}
-		this.props.prayerUpdate();
+		this.props.spellUpdate();
 	}
 
 	setBookStandard() {
@@ -228,9 +228,9 @@ class GearBoxSpell extends React.Component {
 			currwidth: spelllist[theinput].width
 		});
 		var self = this;
-		//setTimeout(function(element) {
-		//	self.props.prayerUpdate();
-		//}, 100);
+		setTimeout(function(element) {
+			self.props.spellUpdate();
+		}, 100);
 	}
 
 	urlUpdate() {

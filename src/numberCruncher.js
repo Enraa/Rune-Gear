@@ -72,7 +72,7 @@ class NumberCrunch extends React.Component {
 		var seteffects = this.props.geartotals.seteffect;
 		var successcount = 0;
 		seteffects.forEach(function (element) {
-			if (element == "void" || element == type) {
+			if (element === "void" || element === type) {
 				successcount++;
 			}
 		});
@@ -85,20 +85,20 @@ class NumberCrunch extends React.Component {
 
 	calculateMaxMelee(modifiedlevel) {
 		var usedlevel = parseInt(this.props.level_str);
-		if (modifiedlevel != undefined) {
+		if (modifiedlevel !== undefined) {
 			usedlevel = modifiedlevel;
 		}
 		var maxhit;
 		var currentstancemod = 0;
 		var currentvoidmod = 1.0;
 		var effective_level;
-		if (this.props.stylecurrentstyle == "aggressive") {
+		if (this.props.stylecurrentstyle === "aggressive") {
 			currentstancemod = 3;
 		}
-		if (this.props.stylecurrentstyle == "controlled") {
+		if (this.props.stylecurrentstyle === "controlled") {
 			currentstancemod = 1;
 		}
-		if (this.countVoid("voidmelee") == true) {
+		if (this.countVoid("voidmelee") === true) {
 			currentvoidmod = 1.1;
 		}
 
@@ -119,17 +119,17 @@ class NumberCrunch extends React.Component {
 
 	calculateMaxRanged(modifiedlevel) {
 		var usedlevel = parseInt(this.props.level_ranged);
-		if (modifiedlevel != undefined) {
+		if (modifiedlevel !== undefined) {
 			usedlevel = modifiedlevel;
 		}
 		var maxhit;
 		var currentstancemod = 0;
 		var currentvoidmod = 1.0;
 		var effective_level;
-		if (this.props.stylecurrentstyle == "accurate") {
+		if (this.props.stylecurrentstyle === "accurate") {
 			currentstancemod = 3;
 		}
-		if (this.countVoid("voidrange") == true) {
+		if (this.countVoid("voidrange") === true) {
 			currentvoidmod = 1.1;
 		}
 
@@ -149,25 +149,41 @@ class NumberCrunch extends React.Component {
 	}
 
 	calculateMaxMagic() {
-		// To implement later
+		// Level does not matter with spell casting unless using tridents. 
+		var maxhit = parseInt(this.props.magicdamage)
+		var damagemod = 1.0;
+		// Check if user is wearing ELITE void robe top, bottom, void gloves and magic helm. 
+		if (this.countVoid("voidmage") === true) {
+			damagemod = damagemod + 0.025;
+		}
+		// Check if user is using bolt spells. Flat +3 damage if they are. 
+		if ((this.props.geartotals.seteffect.includes("chaosgauntlets") === true)&&(this.props.magicspell.search("bolt") === parseInt(this.props.magicspell.length - 4))) {
+			maxhit = parseInt(maxhit) + 3; 
+		}
+
+		// Check if the user has a tome of fire AND is casting a fire spell
+		if ((this.props.geartotals.seteffect.includes("tomefire") === true)&&(this.props.magicspell.search("fire") === 0)) {
+			damagemod = damagemod * 1.5;
+		}
+		return parseInt(maxhit)*parseFloat(damagemod);
 	}
 
 	calculateAccMeleePlayer(type, modifiedlevel) {
 		var usedlevel = parseInt(this.props.level_atk);
-		if (modifiedlevel != undefined) {
+		if (modifiedlevel !== undefined) {
 			usedlevel = modifiedlevel;
 		}
 		var currentstancemod = 0;
 		var currentvoidmod = 1.0;
 		var effective_level;
 		var attackaccuracy;
-		if (this.props.stylecurrentstyle == "accurate") {
+		if (this.props.stylecurrentstyle === "accurate") {
 			currentstancemod = 3;
 		}
-		if (this.props.stylecurrentstyle == "controlled") {
+		if (this.props.stylecurrentstyle === "controlled") {
 			currentstancemod = 1;
 		}
-		if (this.countVoid("voidmelee") == true) {
+		if (this.countVoid("voidmelee") === true) {
 			currentvoidmod = 1.1;
 		}
 
@@ -188,17 +204,17 @@ class NumberCrunch extends React.Component {
 
 	calculateAccRangedPlayer(modifiedlevel) {
 		var usedlevel = parseInt(this.props.level_ranged);
-		if (modifiedlevel != undefined) {
+		if (modifiedlevel !== undefined) {
 			usedlevel = modifiedlevel;
 		}
 		var currentstancemod = 0;
 		var currentvoidmod = 1.0;
 		var effective_level;
 		var attackaccuracy;
-		if (this.props.stylecurrentstyle == "accurate") {
+		if (this.props.stylecurrentstyle === "accurate") {
 			currentstancemod = 3;
 		}
-		if (this.countVoid("voidranged") == true) {
+		if (this.countVoid("voidranged") === true) {
 			currentvoidmod = 1.1;
 		}
 
@@ -218,27 +234,19 @@ class NumberCrunch extends React.Component {
 	}
 
 	calculateAccMagicPlayer() {
-		var currentstancemod = 0;
 		var currentvoidmod = 1.0;
 		var effective_level;
 		var attackaccuracy;
-		if (this.props.stylecurrentstyle == "accurate") {
-			currentstancemod = 3;
-		}
-		if (this.props.stylecurrentstyle == "longrange") {
-			currentstancemod = 1;
-		}
-		if (this.countVoid("voidmagic") == true) {
+		if (this.countVoid("voidmagic") === true) {
 			currentvoidmod = 1.3;
 		}
 
-		var currentatklevel =
+		var currentmagelevel =
 			this.props.level_magic *
 			this.props.potioncurrenttotalmod.magic.percentage +
 			parseInt(this.props.potioncurrenttotalmod.magic.level);
 		effective_level = Math.floor(
-			(Math.ceil(currentatklevel * this.props.prayercurrenttotalmod.magic) +
-				currentstancemod +
+			(Math.ceil(currentmagelevel * this.props.prayercurrenttotalmod.magic) +
 				8) *
 			currentvoidmod
 		);
@@ -318,16 +326,16 @@ class NumberCrunch extends React.Component {
 	calculateAccMonster(type, stance) {
 		var attacklevel = 8;
 		var attackaccuracy = 0;
-		if (type == "melee") {
+		if (type === "melee") {
 			attacklevel = attacklevel + this.props.monster.statsatk;
 			attackaccuracy = attacklevel * (this.props.monster[stance] + 64);
 		}
-		if (type == "ranged") {
+		if (type === "ranged") {
 			attacklevel = attacklevel + this.props.monster.statsranged;
 			attackaccuracy =
 				attacklevel * (this.props.monster["aggressiveranged"] + 64);
 		}
-		if (type == "magic") {
+		if (type === "magic") {
 			attacklevel = attacklevel + this.props.monster.statsmagic;
 			attackaccuracy =
 				attacklevel * (this.props.monster["aggressivemagic"] + 64);
@@ -338,17 +346,17 @@ class NumberCrunch extends React.Component {
 	calculateDefMonster(type, stance) {
 		var defenselevel = 8;
 		var defenseaccuracy = 0;
-		if (type == "melee") {
+		if (type === "melee") {
 			defenselevel = defenselevel + parseInt(this.props.monster.statsdef);
 			defenseaccuracy =
 				defenselevel * (parseInt(this.props.monster[stance]) + 64);
 		}
-		if (type == "ranged") {
+		if (type === "ranged") {
 			defenselevel = defenselevel + parseInt(this.props.monster.statsdef);
 			defenseaccuracy =
 				defenselevel * (parseInt(this.props.monster["defenseranged"]) + 64);
 		}
-		if (type == "magic") {
+		if (type === "magic") {
 			defenselevel =
 				defenselevel +
 				Math.floor(
@@ -392,53 +400,68 @@ class NumberCrunch extends React.Component {
 		var strmod = "str_melee"
 		var workingnum = this.props.level_str;
 		var maxhittext = " ";
-		if (this.props.stylecurrentdamage == "ranged") {
+		var tocalculatetext = `To caclulate Max Hit, start with the base ${visiblelevel} level.`;
+		var add8text = `Add +8 to the number.`;
+		if (this.props.stylecurrentdamage === "ranged") {
 			workingnum = this.props.level_ranged;
 			visiblelevel = "Ranged";
 			visiblelevelstrength = "ranged strength"
 			strmod = "str_ranged"
-			if (this.props.potioncurrenttotalmod.ranged.percentage != 1.0) {
+			if (this.props.potioncurrenttotalmod.ranged.percentage !== 1.0) {
 				potionmod = `Calculate your potion boost (${this.props.level_ranged} * ${this.props.potioncurrenttotalmod.ranged.percentage} + ${this.props.potioncurrenttotalmod.ranged.level}). `
 				workingnum = Math.floor(workingnum * this.props.potioncurrenttotalmod.ranged.percentage) + parseInt(this.props.potioncurrenttotalmod.ranged.level)
 			}
-			if (this.props.prayercurrenttotalmod.ranged != 1.0) {
+			if (this.props.prayercurrenttotalmod.ranged !== 1.0) {
 				prayermod = `Multiply by your prayer bonus (${workingnum}*${this.props.prayercurrenttotalmod.rangeddamage}).`;
 				workingnum = Math.floor(workingnum * this.props.prayercurrenttotalmod.rangeddamage)
 			}
-			if (this.props.stylecurrentstyle == "accurate") {
+			if (this.props.stylecurrentstyle === "accurate") {
 				stancemod = "Add your stance bonus. +3 for Accurate"
 				workingnum = workingnum + 3
 			}
 			workingnum = workingnum + 8;
-			if (this.countVoid("voidranged") == true) {
+			if (this.countVoid("voidranged") === true) {
 				voidmod = "Multiply by 1.1 for the Void bonus."
 				workingnum = Math.floor(workingnum * 1.1)
 			}
 			maxhittext = `(${this.props.geartotals[strmod]}+64)/640 * ${workingnum} + 0.5 = ${maxhit}`
 		}
 		else {
-			if (this.props.potioncurrenttotalmod.strength.percentage != 1.0) {
+			if (this.props.potioncurrenttotalmod.strength.percentage !== 1.0) {
 				potionmod = `Calculate your potion boost (${this.props.level_str} * ${this.props.potioncurrenttotalmod.strength.percentage} + ${this.props.potioncurrenttotalmod.strength.level}). `
 				workingnum = Math.floor(workingnum * this.props.potioncurrenttotalmod.strength.percentage) + parseInt(this.props.potioncurrenttotalmod.strength.level)
 			}
-			if (this.props.prayercurrenttotalmod.strength != 1.0) {
+			if (this.props.prayercurrenttotalmod.strength !== 1.0) {
 				prayermod = `Multiply by your prayer bonus (${workingnum}*${this.props.prayercurrenttotalmod.strength}).`;
 				workingnum = Math.floor(workingnum * this.props.prayercurrenttotalmod.strength)
 			}
-			if (this.props.stylecurrentstyle == "aggressive") {
+			if (this.props.stylecurrentstyle === "aggressive") {
 				stancemod = "Add your stance bonus. +3 for Aggressive"
 				workingnum = workingnum + 3
 			}
-			else if (this.props.stylecurrentstyle == "controlled") {
+			else if (this.props.stylecurrentstyle === "controlled") {
 				stancemod = "Add your stance bonus. +1 for Controlled"
 				workingnum = workingnum + 1
 			}
 			workingnum = workingnum + 8;
-			if (this.countVoid("voidmelee") == true) {
+			if (this.countVoid("voidmelee") === true) {
 				voidmod = "Multiply by 1.1 for the Void bonus."
 				workingnum = Math.floor(workingnum * 1.1)
 			}
 			maxhittext = `(${this.props.geartotals[strmod]}+64)/640 * ${workingnum} + 0.5  =  ${maxhit}`
+		}
+		var effectiveleveltext = `Your effective level value is ${workingnum}.`
+		var effectivemaxhitcalc = `Your max hit is calculated by the ${visiblelevelstrength} bonus + 64, then divided by 640. Multiply this by ${workingnum} and then add 0.5. Round the result down.`
+		if (this.props.stylecurrentdamage === "magic") {
+			tocalculatetext = `Your max hit is ${this.props.magicdamage}.`
+			potionmod = " ";
+			prayermod = " ";
+			stancemod = " ";
+			add8text = " ";
+			voidmod = " ";
+			effectiveleveltext = " ";
+			effectivemaxhitcalc = " ";
+			maxhittext = " ";
 		}
 
 		// Calculate Accuracy Attack Roll
@@ -452,27 +475,27 @@ class NumberCrunch extends React.Component {
 		var stramount = this.props.geartotals[strmodacc]
 		var workingnumacc = this.props.level_atk;
 		var maxhittextacc = " ";
-		if (this.props.stylecurrentdamage == "ranged") {
+		if (this.props.stylecurrentdamage === "ranged") {
 		}
 		else {
-			if (this.props.potioncurrenttotalmod.attack.percentage != 1.0) {
+			if (this.props.potioncurrenttotalmod.attack.percentage !== 1.0) {
 				potionmodacc = `Calculate your potion boost (${workingnumacc} * ${this.props.potioncurrenttotalmod.attack.percentage} + ${this.props.potioncurrenttotalmod.attack.level}). `
 				workingnumacc = Math.floor(workingnumacc * this.props.potioncurrenttotalmod.attack.percentage) + parseInt(this.props.potioncurrenttotalmod.attack.level)
 			}
-			if (this.props.prayercurrenttotalmod.attack != 1.0) {
+			if (this.props.prayercurrenttotalmod.attack !== 1.0) {
 				prayermodacc = `Multiply by your prayer bonus (${workingnumacc}*${this.props.prayercurrenttotalmod.attack}). Round up.`;
 				workingnumacc = Math.ceil(workingnumacc * this.props.prayercurrenttotalmod.attack)
 			}
-			if (this.props.stylecurrentstyle == "accurate") {
+			if (this.props.stylecurrentstyle === "accurate") {
 				stancemodacc = "Add your stance bonus. +3 for Accurate"
 				workingnumacc = workingnumacc + 3
 			}
-			else if (this.props.stylecurrentstyle == "controlled") {
+			else if (this.props.stylecurrentstyle === "controlled") {
 				stancemodacc = "Add your stance bonus. +1 for Controlled"
 				workingnumacc = workingnumacc + 1
 			}
 			workingnumacc = workingnumacc + 8;
-			if (this.countVoid("voidmelee") == true) {
+			if (this.countVoid("voidmelee") === true) {
 				voidmodacc = "Multiply by 1.1 for the Void bonus."
 				workingnumacc = Math.floor(workingnumacc * 1.1)
 			}
@@ -484,7 +507,7 @@ class NumberCrunch extends React.Component {
 		var monsterdef = `defense${this.props.stylecurrentdamage}`;
 		var stramountdef = this.props.monster[monsterdef]
 		var deftext = " ";
-		if (this.props.stylecurrentdamage == "ranged") {
+		if (this.props.stylecurrentdamage === "ranged") {
 		}
 		else {
 			deftext = `${effectivedefencelevel} * (${stramountdef}+64) = ${monsterdefense}`
@@ -510,7 +533,7 @@ class NumberCrunch extends React.Component {
 		var swingsperminuteaccuracy = swingsperminute * (atkcurrentroll / 100)
 		var damageperminute = (maxhit / 2) * swingsperminuteaccuracy
 		var maxhitdivided = " ";
-		if (this.props.stylecurrentdamage == "ranged") {
+		if (this.props.stylecurrentdamage === "ranged") {
 		}
 		else {
 			effectiveswingcount = `60 / ${(this.props.geartotals.speed * 0.6).toFixed(1)} = ${swingsperminute}`
@@ -519,20 +542,20 @@ class NumberCrunch extends React.Component {
 			effectiveDPStext = `${damageperminute} / 60 = ${playercurrentDPS}`
 		}
 
-		if (this.state.showyourwork == true) {
+		if (this.state.showyourwork === true) {
 			return (
 				<div style={showyourworkstate}>
 					<div className="NumberCruncherShowWorkMaxHitEffectiveLevel">
-						<div>To caclulate Max Hit, start with the base {visiblelevel} level.</div>
+						<div>{tocalculatetext}</div>
 						<div>{potionmod}</div>
 						<div>{prayermod}</div>
 						<div>{stancemod}</div>
-						<div>Add +8 to the number.</div>
+						<div>{add8text}</div>
 						<div>{voidmod}</div>
-						<div>Your effective level value is {workingnum}.</div>
+						<div>{effectiveleveltext}</div>
 					</div>
 					<div className="NumberCruncherShowWorkMaxHitTotal">
-						<div>Your max hit is calculated by the {visiblelevelstrength} bonus + 64, then divided by 640. Multiply this by {workingnum} and then add 0.5. Round the result down.</div>
+						<div>{effectivemaxhitcalc}</div>
 						<div className="NumberCruncherShowWorkCalculation">{maxhittext}</div>
 					</div>
 					<div className="NumberCruncherShowWorkAccuracy">
@@ -567,7 +590,7 @@ class NumberCrunch extends React.Component {
 						<div className="NumberCruncherShowWorkCalculation">{effectiveswingcountacc}</div>
 					</div>
 					<div className="NumberCruncherShowWorkAttackRoll">
-						<div>There is an equal chance to hit from 0 to your max hit of {maxhit}. Divide this in half to find the mean and multiply it by your hit attacks.</div>
+						<div>There is an equal chance to hit from 0 to your max hit of {maxhit}. Divide this in half to find the mean and multiply it by your hit attacks per minute.</div>
 						<div className="NumberCruncherShowWorkCalculation">{maxhitdivided}</div>
 					</div>
 					<div className="NumberCruncherShowWorkAttackRoll">
@@ -615,9 +638,9 @@ class NumberCrunch extends React.Component {
 			color: "gray"
 		}
 		// Melee Damage Calculations
-		if ((this.props.stylecurrentdamage.toLowerCase() == "slash") || (this.props.stylecurrentdamage.toLowerCase() == "stab") || (this.props.stylecurrentdamage.toLowerCase() == "crush")) {
+		if ((this.props.stylecurrentdamage.toLowerCase() === "slash") || (this.props.stylecurrentdamage.toLowerCase() === "stab") || (this.props.stylecurrentdamage.toLowerCase() === "crush")) {
 			// Slayer Helm Calculations. This will be overridden by the Salve Amulet(ei) below
-			if ((this.props.geartotals.seteffect.includes("slayerhelmi") == true) || (this.props.geartotals.seteffect.includes("slayerhelm") == true) || (this.props.geartotals.seteffect.includes("blackmask") == true)) {
+			if ((this.props.geartotals.seteffect.includes("slayerhelmi") === true) || (this.props.geartotals.seteffect.includes("slayerhelm") === true) || (this.props.geartotals.seteffect.includes("blackmask") === true)) {
 				// This is +20% Ranged
 				returnedmaxhit = "Max Hit versus Slayer Target: "
 				returnedtextacc = "Accuracy versus Slayer Target: "
@@ -627,7 +650,7 @@ class NumberCrunch extends React.Component {
 				testattribute = "slayer"
 			}
 			// This is melee damage of some sort. Every Salve Amulet will work here. Note however that any blackmask effect WILL override this particular evaluation. 
-			if (((this.props.geartotals.seteffect.includes("salveamulet") == true) || (this.props.geartotals.seteffect.includes("salveamulet-i") == true)) && (!((this.props.geartotals.seteffect.includes("slayerhelmi") == true) || (this.props.geartotals.seteffect.includes("slayerhelm") == true) || (this.props.geartotals.seteffect.includes("blackmask") == true)))) {
+			if (((this.props.geartotals.seteffect.includes("salveamulet") === true) || (this.props.geartotals.seteffect.includes("salveamulet-i") === true)) && (!((this.props.geartotals.seteffect.includes("slayerhelmi") === true) || (this.props.geartotals.seteffect.includes("slayerhelm") === true) || (this.props.geartotals.seteffect.includes("blackmask") === true)))) {
 				// This is +15% Attack and Strength
 				returnedmaxhit = "Max Hit versus Undead: "
 				returnedtextacc = "Accuracy versus Undead: "
@@ -636,7 +659,7 @@ class NumberCrunch extends React.Component {
 				newmaxhit = Math.floor(this.calculateMaxMelee(parseInt(this.props.level_str) * 1.15));
 				testattribute = "undead"
 			}
-			if ((this.props.geartotals.seteffect.includes("salveamulet-e") == true) || (this.props.geartotals.seteffect.includes("salveamulet-ei") == true)) {
+			if ((this.props.geartotals.seteffect.includes("salveamulet-e") === true) || (this.props.geartotals.seteffect.includes("salveamulet-ei") === true)) {
 				// This is +20% Attack and Strength
 				returnedmaxhit = "Max Hit versus Undead: "
 				returnedtextacc = "Accuracy versus Undead: "
@@ -647,9 +670,9 @@ class NumberCrunch extends React.Component {
 			}
 		}
 		// Ranged Damage Calculations
-		if ((this.props.stylecurrentdamage.toLowerCase() == "ranged")) {
+		if ((this.props.stylecurrentdamage.toLowerCase() === "ranged")) {
 			// Slayer Helm Calculations. This will be overridden by the Salve Amulet(ei) below
-			if ((this.props.geartotals.seteffect.includes("slayerhelmi") == true) || (this.props.geartotals.seteffect.includes("blackmaski") == true)) {
+			if ((this.props.geartotals.seteffect.includes("slayerhelmi") === true) || (this.props.geartotals.seteffect.includes("blackmaski") === true)) {
 				// This is +20% Ranged
 				returnedmaxhit = "Max Hit versus Slayer Target: "
 				returnedtextacc = "Accuracy versus Slayer Target: "
@@ -659,7 +682,7 @@ class NumberCrunch extends React.Component {
 				testattribute = "slayer"
 			}
 			// This is ranged damage of some sort. Only Salve Amulets i and ei will work. Note that the 15% is lower than 16.67% above, so this will NOT evaluate if slayerhelmi is found
-			if ((this.props.geartotals.seteffect.includes("salveamulet-i") == true) && (!(this.props.geartotals.seteffect.includes("slayerhelmi") == true) || (this.props.geartotals.seteffect.includes("blackmaski") == true))) {
+			if ((this.props.geartotals.seteffect.includes("salveamulet-i") === true) && (!(this.props.geartotals.seteffect.includes("slayerhelmi") === true) || (this.props.geartotals.seteffect.includes("blackmaski") === true))) {
 				// This is +15% Ranged
 				returnedmaxhit = "Max Hit versus Undead: "
 				returnedtextacc = "Accuracy versus Undead: "
@@ -669,7 +692,7 @@ class NumberCrunch extends React.Component {
 				testattribute = "undead"
 			}
 			// This is ranged damage of some sort and can override the blackmask calculation
-			if ((this.props.geartotals.seteffect.includes("salveamulet-ei") == true)) {
+			if ((this.props.geartotals.seteffect.includes("salveamulet-ei") === true)) {
 				// This is +20% Ranged
 				returnedmaxhit = "Max Hit versus Undead: "
 				returnedtextacc = "Accuracy versus Undead: "
@@ -689,7 +712,7 @@ class NumberCrunch extends React.Component {
 				dragontestattribute = "dragon"
 			}
 			// This is ranged damage versus undead dragons
-			if ((this.props.geartotals.seteffect.includes("dragonhuntercrossbow")) && ((testattribute == "undead"))) {
+			if ((this.props.geartotals.seteffect.includes("dragonhuntercrossbow")) && ((testattribute === "undead"))) {
 				// This is +30% Ranged
 				undeaddragonreturnedmaxhit = "Max Hit versus Undead Dragons: "
 				undeaddragonreturnedtextacc = "Accuracy versus Undead Dragons: "
@@ -702,31 +725,31 @@ class NumberCrunch extends React.Component {
 
 		// Figure out if this is relevant
 		if ((attribute != null) && (testattribute != null)) {
-			if (attribute.search(testattribute) != -1) {
+			if (attribute.search(testattribute) !== -1) {
 				stylecolor = {
 					color: "white"
 				}
 			}
-			if ((attribute.search(dragontestattribute) != -1) && (undeaddragontestattribute != null) && (attribute.search(testattribute)) != -1) {
+			if ((attribute.search(dragontestattribute) !== -1) && (undeaddragontestattribute != null) && (attribute.search(testattribute)) !== -1) {
 				undeaddragonstylecolor = {
 					color: "white"
 				}
 			}
-			else if (testattribute == "slayer") {
+			else if (testattribute === "slayer") {
 				stylecolor = {
 					color: "white"
 				}
 			}
 		}
 		if ((attribute != null) && (dragontestattribute != null)) {
-			if (attribute.search(dragontestattribute) != -1) {
+			if (attribute.search(dragontestattribute) !== -1) {
 				dragonstylecolor = {
 					color: "white"
 				}
 			}
 		}
 		if ((attribute != null) && (undeaddragontestattribute != null)) {
-			if ((attribute.search(dragontestattribute) != -1) && (undeaddragontestattribute != null) && (attribute.search(testattribute)) != -1) {
+			if ((attribute.search(dragontestattribute) !== -1) && (undeaddragontestattribute != null) && (attribute.search(testattribute)) !== -1) {
 				undeaddragonstylecolor = {
 					color: "white"
 				}
@@ -843,15 +866,17 @@ class NumberCrunch extends React.Component {
 		var monsterdefense;
 		var playermaxhittext;
 		var maxhit;
-		if (this.props.stylecurrentdamage == "ranged") {
+		if (this.props.stylecurrentdamage === "ranged") {
 			maxhit = Math.floor(this.calculateMaxRanged());
 			playeraccuracyroll = this.calculateAccRangedPlayer();
 			monsterdefense = this.calculateDefMonster("ranged", "defenseranged");
 			playermaxhittext = "Max Hit (Ranged): " + maxhit
 		}
-		else if (this.props.stylecurrentdamage == "magic") {
+		else if (this.props.stylecurrentdamage === "magic") {
 			maxhit = Math.floor(this.calculateMaxMagic());
-			playermaxhittext = "Max Hit (Magic): " + maxhit
+			playermaxhittext = "Max Hit (Magic): " + maxhit;
+			playeraccuracyroll = this.calculateAccMagicPlayer();
+			monsterdefense = this.calculateDefMonster("magic", "defensemagic");
 		}
 		else {
 			maxhit = Math.floor(this.calculateMaxMelee());
