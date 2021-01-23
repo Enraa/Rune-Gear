@@ -1,0 +1,252 @@
+{
+  "wind-strike": {
+    "damage": "2",
+    "element": "air",
+    "type": "strike",
+    "level": "1",
+    "height": "0.6923076923076923",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/a9/Wind_Strike_icon_%28mobile%29.png"
+  },
+  "wind-bolt": {
+    "damage": "9",
+    "element": "air",
+    "type": "bolt",
+    "level": "17",
+    "height": "1",
+    "width": "0.75",
+    "url": "https://oldschool.runescape.wiki/images/b/ba/Wind_Bolt_icon_%28mobile%29.png"
+  },
+  "wind-blast": {
+    "damage": "13",
+    "element": "air",
+    "type": "blast",
+    "level": "41",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/b/bf/Wind_Blast_icon_%28mobile%29.png"
+  },
+  "wind-wave": {
+    "damage": "17",
+    "element": "air",
+    "type": "wave",
+    "level": "62",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/3/3c/Wind_Wave_icon_%28mobile%29.png"
+  },
+  "wind-surge": {
+    "damage": "21",
+    "element": "air",
+    "type": "surge",
+    "level": "81",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/c/c5/Wind_Surge_icon_%28mobile%29.png"
+  },
+  "saradomin-strike": {
+    "damage": "20",
+    "element": "godspell",
+    "type": "saradomin",
+    "level": "60",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/f/f9/Saradomin_Strike_icon_%28mobile%29.png",
+    "info": "Requires Saradomin Staff"
+  },
+  "magic-dart": {
+    "damage": "15",
+    "element": "slayerdart",
+    "type": "slayerdart",
+    "level": "50",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/f/fb/Magic_Dart_icon_%28mobile%29.png",
+    "info": "Requires Slayer Staff or Staff of the Dead"
+  },
+  "water-strike": {
+    "damage": "4",
+    "element": "water",
+    "type": "strike",
+    "level": "5",
+    "height": "0.6923076923076923",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/ad/Water_Strike_icon_%28mobile%29.png"
+  },
+  "water-bolt": {
+    "damage": "10",
+    "element": "water",
+    "type": "bolt",
+    "level": "23",
+    "height": "1",
+    "width": "0.75",
+    "url": "https://oldschool.runescape.wiki/images/8/85/Water_Bolt_icon_%28mobile%29.png"
+  },
+  "water-blast": {
+    "damage": "14",
+    "element": "water",
+    "type": "blast",
+    "level": "47",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/c/c2/Water_Blast_icon_%28mobile%29.png"
+  },
+  "water-wave": {
+    "damage": "18",
+    "element": "water",
+    "type": "wave",
+    "level": "65",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/2/26/Water_Wave_icon_%28mobile%29.png"
+  },
+  "water-surge": {
+    "damage": "22",
+    "element": "water",
+    "type": "surge",
+    "level": "85",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/a5/Water_Surge_icon_%28mobile%29.png"
+  },
+  "claws-of-guthix": {
+    "damage": "20",
+    "element": "godspell",
+    "type": "guthix",
+    "level": "60",
+    "height": "0.9444444444444444‬",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/0/04/Claws_of_Guthix_icon_%28mobile%29.png",
+    "info": "Requires Guthix Staff or Void Knight Mace"
+  },
+  "iban-blast": {
+    "damage": "25",
+    "element": "ibanblast",
+    "type": "ibanblast",
+    "level": "50",
+    "height": "1",
+    "width": "0.86666666666",
+    "url": "https://oldschool.runescape.wiki/images/6/6f/Iban_Blast_icon_%28mobile%29.png",
+    "info": "Requires Iban's Staff"
+  },
+  "earth-strike": {
+    "damage": "6",
+    "element": "earth",
+    "type": "strike",
+    "level": "9",
+    "height": "0.6923076923076923",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/9/9a/Earth_Strike_icon_%28mobile%29.png"
+  },
+  "earth-bolt": {
+    "damage": "11",
+    "element": "earth",
+    "type": "bolt",
+    "level": "29",
+    "height": "1",
+    "width": "0.75",
+    "url": "https://oldschool.runescape.wiki/images/9/91/Earth_Bolt_icon_%28mobile%29.png"
+  },
+  "earth-blast": {
+    "damage": "15",
+    "element": "earth",
+    "type": "blast",
+    "level": "53",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/3/3c/Earth_Blast_icon_%28mobile%29.png"
+  },
+  "earth-wave": {
+    "damage": "19",
+    "element": "earth",
+    "type": "wave",
+    "level": "70",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/3/32/Earth_Wave_icon_%28mobile%29.png"
+  },
+  "earth-surge": {
+    "damage": "23",
+    "element": "earth",
+    "type": "surge",
+    "level": "90",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/1/18/Earth_Surge_icon_%28mobile%29.png"
+  },
+  "flames-of-zamorak": {
+    "damage": "20",
+    "element": "godspell",
+    "type": "zamorak",
+    "level": "60",
+    "height": "0.95",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/c/cd/Flames_of_Zamorak_icon_%28mobile%29.png",
+    "info": "Requires Zamorak Staff"
+  },
+  "crumble-undead": {
+    "damage": "15",
+    "element": "crumbleundead",
+    "type": "crumbleundead",
+    "level": "39",
+    "height": "1",
+    "width": "0.65",
+    "url": "https://oldschool.runescape.wiki/images/a/ac/Crumble_Undead_icon_%28mobile%29.png",
+    "info": "Can only be cast against undead creatures"
+  },
+  "fire-strike": {
+    "damage": "8",
+    "element": "fire",
+    "type": "strike",
+    "level": "13",
+    "height": "0.6923076923076923",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/4/40/Fire_Strike_icon_%28mobile%29.png"
+  },
+  "fire-bolt": {
+    "damage": "12",
+    "element": "fire",
+    "type": "bolt",
+    "level": "35",
+    "height": "1",
+    "width": "0.75",
+    "url": "https://oldschool.runescape.wiki/images/1/17/Fire_Bolt_icon_%28mobile%29.png"
+  },
+  "fire-blast": {
+    "damage": "16",
+    "element": "fire",
+    "type": "blast",
+    "level": "59",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/b/b5/Fire_Blast_icon_%28mobile%29.png"
+  },
+  "fire-wave": {
+    "damage": "20",
+    "element": "fire",
+    "type": "wave",
+    "level": "75",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/b/b3/Fire_Wave_icon_%28mobile%29.png"
+  },
+  "fire-surge": {
+    "damage": "24",
+    "element": "fire",
+    "type": "surge",
+    "level": "95",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/d/dc/Fire_Surge_icon_%28mobile%29.png"
+  },
+  "charge": {
+    "danage": "0",
+    "element": "charge",
+    "type": "charge",
+    "level": "80",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/1/1c/Charge_icon.png",
+    "info": "God Spells deal 50% extra damage"
+  }
+}

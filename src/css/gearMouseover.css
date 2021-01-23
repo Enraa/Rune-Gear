@@ -1,0 +1,147 @@
+#GearMouseoverMain {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	z-index: 8;
+}
+#GearMouseoverTitle {
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	z-index: 9;
+}
+#GearMouseoverTitleFont {
+	position: relative;
+	color: white;
+	width: 40%;
+	font-size: 18px;
+	font-weight: 900;
+	font-family: "Palatino Linotype";
+	text-shadow: 2px 2px #000000;
+	padding-left: 16px;
+	padding-top: 8px;
+	z-index: 10;
+}
+#GearMouseoverTitleWeight {
+	position: absolute;
+	width: 85%;
+	font-size: 12px;
+	font-weight: 900;
+	left: 0px;
+	bottom: 12px;
+	text-align: right;
+	font-family: "Palatino Linotype";
+	text-shadow: 2px 2px #000000;
+	z-index: 10;
+}
+#GearMouseoverTitleWeightIcon {
+	position: absolute;
+	text-align: right;
+	width: 95%;
+	bottom: 10px;
+	z-index: 10;
+}
+#GearMouseoverNothing {
+	color: white;
+	font-size: 14px;
+	font-style: italic;
+	font-family: "Noto Sans";
+	padding-left: 16px;
+	padding-top: 48px;
+	z-index: 10;
+}
+#GearMouseoverItemName {
+	color: white;
+	font-size: 24px;
+	font-weight: 900;
+	font-style: italic;
+	font-family: "Trebuchet MS";
+	font-stretch: ultra-expanded;
+	text-align: center;
+	text-shadow: 2px 2px #000000;
+	padding-top: 48px;
+	z-index: 10;
+}
+#GearMouseoverStyleBackplate {
+	position: relative;
+	top: 10px;
+	width: 100%;
+	height: 280px;
+	background-size: 100% 100%;
+	z-index: 10;
+}
+#GearMouseoverStyleBack {
+	position: absolute;
+	width: 30%;
+	height: 150px;
+	top: 40px;
+	opacity: 1;
+	z-index: 11;
+}
+#GearMouseoverStatsTypeIconBack {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40px;
+	width: 24px;
+	height: 124px;
+	z-index: 11;
+}
+#GearMouseoverStatsTypeIcon {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 18px;
+	height: 20px;
+	background-size: 100% 100%;
+	z-index: 12;
+}
+#GearMouseoverStatsText {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 6px;
+	padding-bottom: 6px;
+	font-size: 16px;
+	font-family: "Noto Sans";
+	text-align: center;
+	width: 18px;
+	height: 20px;
+	background-size: 100% 100%;
+	z-index: 12;
+}
+#GearMouseoverStyleStrBack {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 30px;
+	top: 60px;
+	background-color: skyblue;
+	opacity: 1;
+	z-index: 11;
+}
+#GearMouseoverStatsStrTypeIconBack {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40px;
+	height: 124px;
+	z-index: 11;
+}
+#GearMouseoverStatsStrText {
+	position: absolute;
+	margin-bottom: auto;
+	margin-top: auto;
+	left: 16px;
+	font-size: 16px;
+	font-family: "Noto Sans";
+	width: 30px;
+	height: 20px;
+	float: right;
+	background-color: forestgreen;
+	background-size: 100% 100%;
+	z-index: 12;
+}

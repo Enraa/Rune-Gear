@@ -1,0 +1,162 @@
+{
+  "smoke-rush": {
+    "damage": "14",
+    "element": "smoke",
+    "type": "rush",
+    "level": "50",
+    "height": "0.4",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/7/73/Smoke_Rush_icon_%28mobile%29.png",
+    "info": "Poison's Target for 2 Damage"
+  },
+  "shadow-rush": {
+    "damage": "15",
+    "element": "shadow",
+    "type": "rush",
+    "level": "52",
+    "height": "0.4",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/9/97/Shadow_Rush_icon_%28mobile%29.png",
+    "info": "Reduces Target's Attack by 10%"
+  },
+  "blood-rush": {
+    "damage": "16",
+    "element": "blood",
+    "type": "rush",
+    "level": "56",
+    "height": "0.4",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/e/ef/Blood_Rush_icon_%28mobile%29.png",
+    "info": "Heals for 25% of damage inflicted"
+  },
+  "ice-rush": {
+    "damage": "17",
+    "element": "ice",
+    "type": "rush",
+    "level": "58",
+    "height": "0.4",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/b/ba/Ice_Rush_icon_%28mobile%29.png",
+    "info": "Freezes Target for 5 seconds"
+  },
+  "smoke-burst": {
+    "damage": "18",
+    "element": "smoke",
+    "type": "burst",
+    "level": "62",
+    "height": "0.8571428",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/9/99/Smoke_Burst_icon_%28mobile%29.png",
+    "info": "Poisons Targets for 2 Damage; Hits 3x3"
+  },
+  "shadow-burst": {
+    "damage": "19",
+    "element": "shadow",
+    "type": "burst",
+    "level": "64",
+    "height": "0.8571428",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/d/d8/Shadow_Burst_icon_%28mobile%29.png",
+    "info": "Reduces Targets' Attack by 10%; Hits 3x3"
+  },
+  "blood-burst": {
+    "damage": "21",
+    "element": "blood",
+    "type": "burst",
+    "level": "68",
+    "height": "0.8571428",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/7/72/Blood_Burst_icon_%28mobile%29.png",
+    "info": "Heals for 25% of damage inflicted; Hits 3x3"
+  },
+  "ice-burst": {
+    "damage": "22",
+    "element": "ice",
+    "type": "burst",
+    "level": "70",
+    "height": "0.8571428",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/1/11/Ice_Burst_icon_%28mobile%29.png",
+    "info": "Freezes Targets for 10 seconds; Hits 3x3"
+  },
+  "smoke-blitz": {
+    "damage": "23",
+    "element": "smoke",
+    "type": "blitz",
+    "level": "74",
+    "height": "1",
+    "width": "0.4",
+    "url": "https://oldschool.runescape.wiki/images/2/20/Smoke_Blitz_icon_%28mobile%29.png",
+    "info": "Poisons Target for 4 Damage"
+  },
+  "shadow-blitz": {
+    "damage": "24",
+    "element": "shadow",
+    "type": "blitz",
+    "level": "76",
+    "height": "1",
+    "width": "0.4",
+    "url": "https://oldschool.runescape.wiki/images/e/e2/Shadow_Blitz_icon_%28mobile%29.png",
+    "info": "Reduces Target's Attack by 15%"
+  },
+  "blood-blitz": {
+    "damage": "25",
+    "element": "blood",
+    "type": "blitz",
+    "level": "80",
+    "height": "1",
+    "width": "0.4",
+    "url": "https://oldschool.runescape.wiki/images/e/e8/Blood_Blitz_icon_%28mobile%29.png",
+    "info": "Heals for 25% of damage inflicted"
+  },
+  "ice-blitz": {
+    "damage": "26",
+    "element": "ice",
+    "type": "blitz",
+    "level": "82",
+    "height": "1",
+    "width": "0.4",
+    "url": "https://oldschool.runescape.wiki/images/8/88/Ice_Blitz_icon_%28mobile%29.png",
+    "info": "Freezes Target for 15 seconds"
+  },
+  "smoke-barrage": {
+    "damage": "27",
+    "element": "smoke",
+    "type": "barrage",
+    "level": "86",
+    "height": "1",
+    "width": "0.95",
+    "url": "https://oldschool.runescape.wiki/images/3/31/Smoke_Barrage_icon_%28mobile%29.png",
+    "info": "Poisons Targets for 4 Damage; Hits 3x3"
+  },
+  "shadow-barrage": {
+    "damage": "28",
+    "element": "shadow",
+    "type": "barrage",
+    "level": "88",
+    "height": "1",
+    "width": "0.95",
+    "url": "https://oldschool.runescape.wiki/images/2/26/Shadow_Barrage_icon_%28mobile%29.png",
+    "info": "Reduces Targets' Attack by 15%; Hits 3x3"
+  },
+  "blood-barrage": {
+    "damage": "29",
+    "element": "blood",
+    "type": "barrage",
+    "level": "92",
+    "height": "1",
+    "width": "0.95",
+    "url": "https://oldschool.runescape.wiki/images/5/5e/Blood_Barrage_icon_%28mobile%29.png",
+    "info": "Heals for 25% of damage inflicted; Hits 3x3"
+  },
+  "ice-barrage": {
+    "damage": "30",
+    "element": "ice",
+    "type": "barrage",
+    "level": "94",
+    "height": "1",
+    "width": "0.95",
+    "url": "https://oldschool.runescape.wiki/images/e/e6/Ice_Barrage_icon_%28mobile%29.png",
+    "info": "Freezes Target for 20 seconds; Hits 3x3"
+  }
+}

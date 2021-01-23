@@ -1,0 +1,196 @@
+{
+  "attack-potion": {
+    "url": "https://oldschool.runescape.wiki/images/a/ae/Attack_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "attack": {
+      "mod": "10",
+      "addlevel": "3"
+    }
+  },
+  "super-attack-potion": {
+    "url": "https://oldschool.runescape.wiki/images/f/ff/Super_attack%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "attack": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "zamorak-brew": {
+    "url": "https://oldschool.runescape.wiki/images/a/ad/Zamorak_brew%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "attack": {
+      "mod": "20",
+      "addlevel": "2"
+    },
+    "strength": {
+      "mod": "12",
+      "addlevel": "2"
+    }
+  },
+  "strength-potion": {
+    "url": "https://oldschool.runescape.wiki/images/c/c3/Strength_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "strength": {
+      "mod": "10",
+      "addlevel": "3"
+    }
+  },
+  "super-strength-potion": {
+    "url": "https://oldschool.runescape.wiki/images/3/32/Super_strength%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "strength": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "combat-potion": {
+    "url": "https://oldschool.runescape.wiki/images/0/0d/Combat_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "attack": {
+      "mod": "10",
+      "addlevel": "3"
+    },
+    "strength": {
+      "mod": "10",
+      "addlevel": "3"
+    }
+  },
+  "defence-potion": {
+    "url": "https://oldschool.runescape.wiki/images/0/0c/Defence_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "defense": {
+      "mod": "10",
+      "addlevel": "3"
+    }
+  },
+  "super-defence-potion": {
+    "url": "https://oldschool.runescape.wiki/images/9/94/Super_defence%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "defense": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "saradomin-brew": {
+    "url": "https://oldschool.runescape.wiki/images/5/50/Saradomin_brew%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "defense": {
+      "mod": "20",
+      "addlevel": "2"
+    }
+  },
+  "magic-potion": {
+    "url": "https://oldschool.runescape.wiki/images/f/f1/Magic_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "magic": {
+      "mod": "0",
+      "addlevel": "4"
+    }
+  },
+  "super-magic-potion": {
+    "url": "https://oldschool.runescape.wiki/images/4/47/Super_magic_potion_%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "magic": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "battlemage-potion": {
+    "url": "https://oldschool.runescape.wiki/images/0/0f/Battlemage_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "magic": {
+      "mod": "0",
+      "addlevel": "4"
+    },
+    "defense": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "ranging-potion": {
+    "url": "https://oldschool.runescape.wiki/images/6/6f/Ranging_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "ranged": {
+      "mod": "10",
+      "addlevel": "4"
+    }
+  },
+  "super-ranging": {
+    "url": "https://oldschool.runescape.wiki/images/f/fb/Super_ranging_%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "ranged": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "bastion-potion": {
+    "url": "https://oldschool.runescape.wiki/images/f/ff/Bastion_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "ranged": {
+      "mod": "10",
+      "addlevel": "4"
+    },
+    "defense": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "super-combat-potion": {
+    "url": "https://oldschool.runescape.wiki/images/8/82/Super_combat_potion%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "attack": {
+      "mod": "15",
+      "addlevel": "5"
+    },
+    "strength": {
+      "mod": "15",
+      "addlevel": "5"
+    },
+    "defense": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "overload": {
+    "url": "https://oldschool.runescape.wiki/images/8/82/Overload_%284%29.png",
+    "width": "0.7",
+    "height": "1",
+    "attack": {
+      "mod": "15",
+      "addlevel": "5"
+    },
+    "strength": {
+      "mod": "15",
+      "addlevel": "5"
+    },
+    "defense": {
+      "mod": "15",
+      "addlevel": "5"
+    }
+  },
+  "imbued-heart": {
+    "url": "https://oldschool.runescape.wiki/images/f/fe/Imbued_heart.png",
+    "width": "1",
+    "height": "0.65517241379310344827586206896552",
+    "magic": {
+      "mod": "10",
+      "addlevel": "1"
+    }
+  }
+}

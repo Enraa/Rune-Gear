@@ -1,0 +1,320 @@
+{
+  "thick-skin": {
+    "stat": "defense",
+    "mod": "5",
+    "drainrate": "5",
+    "drainresist": "3",
+    "level": "1",
+    "height": "1",
+    "width": "0.93333333333333333333333333333333‬",
+    "url": "https://oldschool.runescape.wiki/images/6/6a/Thick_Skin.png"
+  },
+  "burst-of-strength": {
+    "stat": "strength",
+    "mod": "5",
+    "drainrate": "5",
+    "drainresist": "3",
+    "level": "4",
+    "height": "1",
+    "width": "0.92592592592592592592592592592593",
+    "url": "https://oldschool.runescape.wiki/images/7/7b/Burst_of_Strength.png"
+  },
+  "clarity-of-thought": {
+    "stat": "attack",
+    "mod": "5",
+    "drainrate": "5",
+    "drainresist": "3",
+    "level": "7",
+    "height": "0.78571428571428571428571428571429",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/e/e1/Clarity_of_Thought.png"
+  },
+  "sharp-eye": {
+    "stat": "ranged",
+    "mod": "5",
+    "drainrate": "5",
+    "drainresist": "3",
+    "level": "8",
+    "height": "0.85714285714285714285714285714286",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/a3/Sharp_Eye.png"
+  },
+  "mystic-will": {
+    "stat": "magic",
+    "mod": "5",
+    "drainrate": "5",
+    "drainresist": "3",
+    "level": "9",
+    "height": "0.92857142857142857142857142857143",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/2/23/Mystic_Will.png"
+  },
+  "rock-skin": {
+    "stat": "defense",
+    "mod": "10",
+    "drainrate": "10",
+    "drainresist": "6",
+    "level": "10",
+    "height": "1",
+    "width": "0.93333333333333333333333333333333‬",
+    "url": "https://oldschool.runescape.wiki/images/7/71/Rock_Skin.png"
+  },
+  "superhuman-strength": {
+    "stat": "strength",
+    "mod": "10",
+    "drainrate": "10",
+    "drainresist": "6",
+    "level": "13",
+    "height": "1",
+    "width": "0.92592592592592592592592592592593",
+    "url": "https://oldschool.runescape.wiki/images/0/08/Superhuman_Strength.png"
+  },
+  "improved-reflexes": {
+    "stat": "attack",
+    "mod": "10",
+    "drainrate": "10",
+    "drainresist": "6",
+    "level": "16",
+    "height": "0.78571428571428571428571428571429",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/7/7e/Improved_Reflexes.png"
+  },
+  "rapid-restore": {
+    "stat": "stats",
+    "mod": "100",
+    "drainrate": "1.66",
+    "drainresist": "1",
+    "level": "19",
+    "height": "0.89285714285714285714285714285714",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/0/0f/Rapid_Restore.png"
+  },
+  "rapid-heal": {
+    "stat": "hp",
+    "mod": "100",
+    "drainrate": "3.33",
+    "drainresist": "2",
+    "level": "22",
+    "height": "0.89285714285714285714285714285714",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/a3/Rapid_Heal.png"
+  },
+  "protect-item": {
+    "stat": "item",
+    "mod": "0",
+    "drainrate": "3.33",
+    "drainresist": "2",
+    "level": "25",
+    "height": "0.96666666666666666666666666666667‬",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/af/Protect_Item.png"
+  },
+  "hawk-eye": {
+    "stat": "ranged",
+    "mod": "10",
+    "drainrate": "10",
+    "drainresist": "6",
+    "level": "26",
+    "height": "0.85714285714285714285714285714286",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/8/8b/Hawk_Eye.png"
+  },
+  "mystic-lore": {
+    "stat": "magic",
+    "mod": "10",
+    "drainrate": "10",
+    "drainresist": "6",
+    "level": "27",
+    "height": "0.92857142857142857142857142857143",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/d/d1/Mystic_Lore.png"
+  },
+  "steel-skin": {
+    "stat": "defense",
+    "mod": "15",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "28",
+    "height": "1",
+    "width": "0.93333333333333333333333333333333‬",
+    "url": "https://oldschool.runescape.wiki/images/c/ce/Steel_Skin.png"
+  },
+  "ultimate-strength": {
+    "stat": "strength",
+    "mod": "15",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "31",
+    "height": "1",
+    "width": "0.92592592592592592592592592592593",
+    "url": "https://oldschool.runescape.wiki/images/3/3d/Ultimate_Strength.png"
+  },
+  "incredible-reflexes": {
+    "stat": "attack",
+    "mod": "15",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "34",
+    "height": "0.78571428571428571428571428571429",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/8/85/Incredible_Reflexes.png"
+  },
+  "protect-from-magic": {
+    "stat": "protect-magic",
+    "mod": "100",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "37",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/2/2c/Protect_from_Magic.png"
+  },
+  "protect-from-missles": {
+    "stat": "protect-ranged",
+    "mod": "100",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "40",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/d/de/Protect_from_Missiles.png"
+  },
+  "protect-from-melee": {
+    "stat": "protect-melee",
+    "mod": "100",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "43",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/c/cb/Protect_from_Melee.png"
+  },
+  "eagle-eye": {
+    "stat": "ranged",
+    "mod": "15",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "44",
+    "height": "0.85714285714285714285714285714286",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/d/d5/Eagle_Eye.png"
+  },
+  "mystic-might": {
+    "stat": "magic",
+    "mod": "15",
+    "drainrate": "20",
+    "drainresist": "12",
+    "level": "45",
+    "height": "0.92857142857142857142857142857143",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/0/03/Mystic_Might.png"
+  },
+  "retribution": {
+    "stat": "protect-death",
+    "mod": "25",
+    "drainrate": "5",
+    "drainresist": "3",
+    "level": "46",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/f/fb/Retribution.png"
+  },
+  "redemption": {
+    "stat": "protect-hp",
+    "mod": "25",
+    "drainrate": "10",
+    "drainresist": "6",
+    "level": "49",
+    "height": "0.89285714285714285714285714285714",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/1/1c/Redemption.png"
+  },
+  "smite": {
+    "stat": "protect-leech",
+    "mod": "25",
+    "drainrate": "30",
+    "drainresist": "18",
+    "level": "52",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/0/05/Smite.png"
+  },
+  "preserve": {
+    "stat": "preserve",
+    "mod": "200",
+    "drainrate": "3.33",
+    "drainresist": "2",
+    "level": "55",
+    "height": "1",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/d/d1/Preserve.png"
+  },
+  "chivalry": {
+    "stat": "multi",
+    "mod": "15",
+    "mod2": "18",
+    "mod3": "20",
+    "statorder": [
+      "attack",
+      "strength",
+      "defense"
+    ],
+    "drainrate": "40",
+    "drainresist": "24",
+    "level": "60",
+    "height": "1",
+    "width": "0.63333333333333333333333333333333",
+    "url": "https://oldschool.runescape.wiki/images/1/16/Chivalry.png"
+  },
+  "piety": {
+    "stat": "multi",
+    "mod": "20",
+    "mod2": "23",
+    "mod3": "25",
+    "statorder": [
+      "attack",
+      "strength",
+      "defense"
+    ],
+    "drainrate": "40",
+    "drainresist": "24",
+    "level": "70",
+    "height": "0.46666666666666666",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/a/a2/Piety.png"
+  },
+  "rigour": {
+    "stat": "multi",
+    "mod": "20",
+    "mod2": "23",
+    "mod3": "25",
+    "statorder": [
+      "ranged",
+      "rangeddamage",
+      "defense"
+    ],
+    "drainrate": "40",
+    "drainresist": "24",
+    "level": "74",
+    "height": "0.85714285714285714285714285714286",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/5/5b/Rigour.png"
+  },
+  "augury": {
+    "stat": "multi",
+    "mod": "25",
+    "mod2": "0",
+    "mod3": "25",
+    "statorder": [
+      "magic",
+      "none",
+      "defense"
+    ],
+    "drainrate": "40",
+    "drainresist": "24",
+    "level": "77",
+    "height": "0.92857142857142857142857142857143",
+    "width": "1",
+    "url": "https://oldschool.runescape.wiki/images/9/93/Augury.png"
+  }
+}

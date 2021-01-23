@@ -1,0 +1,125 @@
+{
+  "unarmed": [
+    "accurate-crush",
+    "aggressive-crush",
+    "defensive-crush"
+  ],
+  "dagger": [
+    "accurate-stab",
+    "aggressive-stab",
+    "aggressive-slash",
+    "defensive-stab"
+  ],
+  "stabsword": [
+    "accurate-stab",
+    "aggressive-stab",
+    "aggressive-slash",
+    "defensive-stab"
+  ],
+  "hacksword": [
+    "accurate-slash",
+    "aggressive-slash",
+    "controlled-stab",
+    "defensive-slash"
+  ],
+  "scimitar": [
+    "accurate-slash",
+    "aggressive-slash",
+    "controlled-stab",
+    "defensive-slash"
+  ],
+  "spiked": [
+    "accurate-crush",
+    "aggressive-crush",
+    "controlled-stab",
+    "defensive-crush"
+  ],
+  "axe": [
+    "accurate-slash",
+    "aggressive-slash",
+    "aggressive-crush",
+    "defensive-slash"
+  ],
+  "blunt": [
+    "accurate-crush",
+    "aggressive-crush",
+    "defensive-crush"
+  ],
+  "heavysword": [
+    "accurate-slash",
+    "aggressive-slash",
+    "aggressive-crush",
+    "defensive-slash"
+  ],
+  "spear": [
+    "controlled-stab",
+    "controlled-slash",
+    "controlled-crush",
+    "defensive-stab"
+  ],
+  "polearm": [
+    "controlled-stab",
+    "aggressive-slash",
+    "defensive-stab"
+  ],
+  "Claws": [
+    "accurate-slash",
+    "aggressive-slash",
+    "controlled-stab",
+    "defensive-slash"
+  ],
+  "pickaxe": [
+    "accurate-stab",
+    "aggressive-stab",
+    "aggressive-crush",
+    "defensive-stab"
+  ],
+  "whip": [
+    "accurate-slash",
+    "controlled-slash",
+    "defensive-slash"
+  ],
+  "bow": [
+    "accurate-ranged",
+    "rapid-ranged",
+    "longrange-ranged"
+  ],
+  "thrown": [
+    "accurate-ranged",
+    "rapid-ranged",
+    "longrange-ranged"
+  ],
+  "crossbow": [
+    "accurate-ranged",
+    "rapid-ranged",
+    "longrange-ranged"
+  ],
+  "grenade": [
+    "accurate-ranged",
+    "rapid-ranged",
+    "longrange-ranged"
+  ],
+  "flamer": [
+    "aggressive-slash",
+    "rapid-ranged",
+    "weapon-magic"
+  ],
+  "staff-selfpowering": [
+    "accurate-magic",
+    "longrange-magic"
+  ],
+  "staff": [
+    "accurate-crush",
+    "aggressive-crush",
+    "defensive-crush",
+    "spelldefensive-magic",
+    "spell-magic"
+  ],
+  "staff-bladed": [
+    "accurate-stab",
+    "aggressive-slash",
+    "defensive-crush",
+    "spelldefensive-magic",
+    "spell-magic"
+  ]
+}
